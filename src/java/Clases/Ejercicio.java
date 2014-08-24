@@ -7,17 +7,16 @@
 package Clases;
 
 import javax.inject.Named;
-import javax.enterprise.context.Dependent;
+import javax.enterprise.context.ApplicationScoped;
 
 /**
  *
  * @author lgutierrez
  */
-@Named(value = "ejercicio1")
-@Dependent
-public class Ejercicio1 {
-
-    int N1 =0;
+@Named(value = "ejercicio")
+@ApplicationScoped
+public class Ejercicio {
+int N1 =0;
 
     public int getN1() {
         return N1;
@@ -38,7 +37,7 @@ public class Ejercicio1 {
     /**
      * Creates a new instance of Ejercicio1
      */
-    public Ejercicio1() {
+    public Ejercicio() {
         
         
     }
@@ -53,13 +52,18 @@ public class Ejercicio1 {
         return Mensaje;
     }
     
-    public String Validar()
+    public void Validar()
     {
         if(N1 == N2)
             Mensaje = "Son iguales";
         else if (N1 > N2)
             Mensaje = "El primero es mayor";
         else Mensaje = "El segundo es mayor";
-        return "OK";
     }
+    
+    public String Respuesta()
+    {
+        return this.Mensaje;
+    }
+    
 }
