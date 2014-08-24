@@ -33,10 +33,23 @@
                 
             </h:panelGrid>
         </p:tab>
-        <p:tab title="Ejercicio II">
-            <h:panelGrid columns="2" cellpadding="10">
+        <p:tab title="Ejercicio II" >
+            <h:panelGrid columns="2" cellpadding="10" id="test2">
                 
-                <h:outputText value="Francis Ford Coppola's legendary..." />
+                <p:outputLabel for="n11" value="Número uno:" />
+                <p:inputText id="n11" value="#{ejercicio2.n1}"/>
+                
+                <p:outputLabel for="n22" value="Número Dos:" />
+                <p:inputText id="n22" value="#{ejercicio2.n2}" />
+                
+                <p:outputLabel for="n33" value="Número Tres:" />
+                <p:inputText id="n33" value="#{ejercicio2.n3}" />
+                
+                <p:commandButton value="Calcular" actionListener="#{ejercicio2.Calcular()}"  update = "test2">
+                    <f:param name="productId2" value="11" />
+                </p:commandButton>
+                
+                <h:outputText  value="respuesta #{ejercicio2.mensaje}" />  
             </h:panelGrid>
         </p:tab>
         <p:tab title="Ejercicio IV">
