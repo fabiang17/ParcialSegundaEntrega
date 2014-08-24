@@ -14,28 +14,65 @@
 <p:messages/>
 <p:panel header="Seleccione un ejercicio">
 
-    <p:growl id="messages"/>
+    <h3 style="margin-top:0">Listado</h3>
+    <p:accordionPanel>
+        <p:tab title="Ejercicio I">
+            <h:panelGrid columns="2" cellpadding="10">
+                
+                <p:outputLabel for="n1" value="Número uno:" />
+                <p:inputText id="n1" value="#{ejercicio1.n1}"/>
+                
+                <p:outputLabel for="n2" value="Número Dos:" />
+                <p:inputText id="n2" value="#{ejercicio1.n2}" />
+                
+                <h:commandButton value="Calcular" action="#{ejercicio1.Validar()}" onclick="PF('dlg1').show();">
+                    <f:param name="productId" value="10" />
+                </h:commandButton>
+                
+                <p:dialog header="Basic Dialog" widgetVar="dlg1" minHeight="40">
+                    <h:outputText value="" />
+                </p:dialog>
  
-    <p:menubar>
-        <p:submenu label="Ejercicios" icon="ui-icon-document">
-            <p:submenu label="New" icon="ui-icon-contact">
-                <p:menuitem value="Ejercicio1" url="Ejercicio1.xhtml" />
-                <p:menuitem value="Ejercicio2" url="Ejercicio2.xhtml" />
-                <p:menuitem value="Ejercicio3" url="Ejercicio3.xhtml" />
-                <p:menuitem value="Ejercicio4" url="Ejercicio4.xhtml" />
-                <p:menuitem value="Ejercicio5" url="Ejercicio5.xhtml" />
-                <p:menuitem value="Ejercicio6" url="Ejercicio6.xhtml" />
-                <p:menuitem value="Ejercicio7" url="Ejercicio7.xhtml" />
-                <p:menuitem value="Ejercicio8" url="Ejercicio8.xhtml" />
-            </p:submenu>
-            <p:menuitem value="Open" url="#" />
-            <p:separator />
-            <p:menuitem value="Quit" url="#" />
-        </p:submenu>
-        <f:facet name="options">
-            
-        </f:facet>
-    </p:menubar>
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Ejercicio II">
+            <h:panelGrid columns="2" cellpadding="10">
+                
+                <h:outputText value="Francis Ford Coppola's legendary..." />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Ejercicio IV">
+            <h:panelGrid columns="2" cellpadding="10">
+                
+                <h:outputText value="After a break of more than 15 years..." />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Ejercicio V">
+            <h:panelGrid columns="2" cellpadding="10">
+                
+                <h:outputText value="After a break of more than 15 years..." />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Ejercicio VI">
+            <h:panelGrid columns="2" cellpadding="10">
+                
+                <h:outputText value="After a break of more than 15 years..." />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Ejercicio VII">
+            <h:panelGrid columns="2" cellpadding="10">
+                
+                <h:outputText value="After a break of more than 15 years..." />
+            </h:panelGrid>
+        </p:tab>
+        
+        <p:tab title="Ejercicio VIII">
+            <h:panelGrid columns="2" cellpadding="10">
+                
+                <h:outputText value="After a break of more than 15 years..." />
+            </h:panelGrid>
+        </p:tab>
+    </p:accordionPanel>
     
 </p:panel>
 </h:form>
