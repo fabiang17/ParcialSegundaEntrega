@@ -64,9 +64,19 @@
             </h:panelGrid>
         </p:tab>
         <p:tab title="Ejercicio IV">
-            <h:panelGrid columns="2" cellpadding="10">
+            <h:panelGrid columns="2" cellpadding="10" id = "test4">
                 
-                <h:outputText value="After a break of more than 15 years..." />
+                <p:outputLabel for="n1346" value="Número uno:" />
+                <p:inputText id="n1346" value="#{ejercicio4.catA}"/>
+                
+                <p:outputLabel for="n2346" value="Número Dos:" />
+                <p:inputText id="n2346" value="#{ejercicio4.catB}" />
+                
+                <p:commandButton value="Calcular" actionListener="#{ejercicio4.Calcular()}"  update = "test4">
+                    <f:param name="productId55" value="15" />
+                </p:commandButton>
+                
+                <h:outputText  value="respuesta #{ejercicio4.hipo}" />  
             </h:panelGrid>
         </p:tab>
         <p:tab title="Ejercicio V">
