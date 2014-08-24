@@ -52,6 +52,17 @@
                 <h:outputText  value="respuesta #{ejercicio2.mensaje}" />  
             </h:panelGrid>
         </p:tab>
+        
+        <p:tab title="Ejercicio III" >
+            <h:panelGrid columns="2" cellpadding="10" id="test3">
+                
+                <p:commandButton value="Calcular" actionListener="#{ejercicio3.Calcular()}"  update = "test3">
+                    <f:param name="productId3" value="12" />
+                </p:commandButton>
+                
+                <h:outputText  value="respuesta #{ejercicio3.suma}" />  
+            </h:panelGrid>
+        </p:tab>
         <p:tab title="Ejercicio IV">
             <h:panelGrid columns="2" cellpadding="10">
                 
