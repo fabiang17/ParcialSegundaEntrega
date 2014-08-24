@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="./template.xhtml">
+<ui:define name="top">
+<h2>Parcial ingenieria de software II</h2>
+</ui:define>
+<ui:define name="content">
+<h:form>
+<p:messages/>
+<p:panel header="Seleccione un ejercicio">
+
+    <p:growl id="messages"/>
+ 
+    <p:menubar>
+        <p:submenu label="Ejercicios" icon="ui-icon-document">
+            <p:submenu label="New" icon="ui-icon-contact">
+                <p:menuitem value="Ejercicio1" url="Ejercicio1.xhtml" />
+                <p:menuitem value="Ejercicio2" url="Ejercicio2.xhtml" />
+                <p:menuitem value="Ejercicio3" url="Ejercicio3.xhtml" />
+                <p:menuitem value="Ejercicio4" url="Ejercicio4.xhtml" />
+                <p:menuitem value="Ejercicio5" url="Ejercicio5.xhtml" />
+                <p:menuitem value="Ejercicio6" url="Ejercicio6.xhtml" />
+                <p:menuitem value="Ejercicio7" url="Ejercicio7.xhtml" />
+                <p:menuitem value="Ejercicio8" url="Ejercicio8.xhtml" />
+            </p:submenu>
+            <p:menuitem value="Open" url="#" />
+            <p:separator />
+            <p:menuitem value="Quit" url="#" />
+        </p:submenu>
+        <f:facet name="options">
+            
+        </f:facet>
+    </p:menubar>
+    
+</p:panel>
+</h:form>
+</ui:define>
+</ui:composition></html>
+
+
+
