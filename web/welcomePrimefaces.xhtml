@@ -66,10 +66,10 @@
         <p:tab title="Ejercicio IV">
             <h:panelGrid columns="2" cellpadding="10" id = "test4">
                 
-                <p:outputLabel for="n1346" value="Número uno:" />
+                <p:outputLabel for="n1346" value="Catetto uno:" />
                 <p:inputText id="n1346" value="#{ejercicio4.catA}"/>
                 
-                <p:outputLabel for="n2346" value="Número Dos:" />
+                <p:outputLabel for="n2346" value="Catetto Dos:" />
                 <p:inputText id="n2346" value="#{ejercicio4.catB}" />
                 
                 <p:commandButton value="Calcular" actionListener="#{ejercicio4.Calcular()}"  update = "test4">
@@ -80,28 +80,51 @@
             </h:panelGrid>
         </p:tab>
         <p:tab title="Ejercicio V">
-            <h:panelGrid columns="2" cellpadding="10">
+            <h:panelGrid columns="2" cellpadding="10" id ="test5">
                 
-                <h:outputText value="After a break of more than 15 years..." />
+                <p:outputLabel for="n134611" value="Altura uno:" />
+                <p:inputText id="n134611" value="#{ejercicio5.h}"/>
+                
+                <p:outputLabel for="n234611" value="Radio Dos:" />
+                <p:inputText id="n234611" value="#{ejercicio5.r}" />
+                
+                <p:commandButton value="Calcular Area" actionListener="#{ejercicio5.CalcularArea()}"  update = "test5">
+                    <f:param name="productId512345" value="1512" />
+                </p:commandButton>
+                
+                <p:commandButton value="Calcular Volumen" actionListener="#{ejercicio5.CalcularVolumen()}"  update = "test5">
+                    <f:param name="productId51325" value="11215" />
+                </p:commandButton>
+                
+                <h:outputText  value="Area #{ejercicio5.area}" />  
+                <h:outputText  value="Volumen #{ejercicio5.volumen}" />  
             </h:panelGrid>
         </p:tab>
         <p:tab title="Ejercicio VI">
-            <h:panelGrid columns="2" cellpadding="10">
+            <h:panelGrid columns="2" cellpadding="10" id = "test6">
+                 
+                <p:outputLabel for="n13461111" value="Nùmero:" />
+                <p:inputText id="n13461111" value="#{ejercicio6.n}"/>
                 
-                <h:outputText value="After a break of more than 15 years..." />
+                <p:commandButton value="Calcular Volumen" actionListener="#{ejercicio6.Calcular()}"  update = "test6">
+                    <f:param name="productId5132511" value="1121511" />
+                </p:commandButton>
+                
+                <h:outputText  value="Respuesta es Par o Impar ??: #{ejercicio6.mensaje}" />  
+                
             </h:panelGrid>
         </p:tab>
         <p:tab title="Ejercicio VII">
             <h:panelGrid columns="2" cellpadding="10">
                 
-                <h:outputText value="After a break of more than 15 years..." />
+                
             </h:panelGrid>
         </p:tab>
         
         <p:tab title="Ejercicio VIII">
             <h:panelGrid columns="2" cellpadding="10">
                 
-                <h:outputText value="After a break of more than 15 years..." />
+                
             </h:panelGrid>
         </p:tab>
     </p:accordionPanel>
